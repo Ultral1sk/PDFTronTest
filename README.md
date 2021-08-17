@@ -1,12 +1,12 @@
 ## Test PDFTron Project
 
-# Project Created with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- In this project pdf document can only be generated with the PDFTron webviewer component.
+- Main task is, pdf document to be generated without the webview component.
+- Use webviewer component functions to create a helper function that'll generate the document.
 
 ## Available Scripts
 
-In the project directory, you can run:
+## How to start the project
 
 ### `npm install`
 
