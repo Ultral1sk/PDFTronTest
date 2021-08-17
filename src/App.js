@@ -1,6 +1,8 @@
 import React from "react";
 import { saveAs } from "file-saver";
+import Webviewer from "./Webviewer";
 
+// example is still not working
 const App = () => {
   function saveBuffer(buf, name, mimetype) {
     const blob = new Blob([buf], {
@@ -53,6 +55,7 @@ const App = () => {
     <>
       <div id="webviewer"></div>
       <button onClick={generatePdf}>Click</button>
+      {/* <Webviewer /> */}
     </>
   );
 };
