@@ -1,20 +1,18 @@
 import React from "react";
 import { saveAs } from "file-saver";
-import Webviewer from "./Webviewer";
 
 // example is still not working
 const App = () => {
+  window.Core.setWorkerPath("WebViewer/lib/core");
+
   function saveBuffer(buf, name, mimetype) {
     const blob = new Blob([buf], {
       type: mimetype,
     });
-    console.log(blob, name);
     return saveAs(blob, name);
   }
 
   function saveBufferAsPDFDoc(buf, name) {
-    console.log(buf, name);
-
     return saveBuffer(buf, name, "application/pdf");
   }
 
@@ -51,13 +49,7 @@ const App = () => {
     })(window);
   };
 
-  return (
-    <>
-      <div id="webviewer"></div>
-      <button onClick={generatePdf}>Click</button>
-      {/* <Webviewer /> */}
-    </>
-  );
+  return <button onClick={generatePdf}>Click</button>;
 };
 
 export default App;
